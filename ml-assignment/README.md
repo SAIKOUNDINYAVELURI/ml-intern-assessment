@@ -45,17 +45,21 @@ All design decisions are documented in `evaluation.md`. The key points include:
 
 ## Project Structure
 
+## Project Structure
+
 ```
 Trigram-Language-Model/
 │
 ├── data/
-│   └── example_corpus.txt       # Sample corpus for training
+│   └── example_corpus.txt       
 │
 ├── src/
-│   └── generate.py              # Script to train model and generate text
+│   ├── generate.py              
+│   ├── utils.py                
+│   └── ngram_model.py          
 │
 ├── tests/
-│   └── test_model.py            # Test cases for the model
+│   └── test_model.py           
 │
-├── evaluation.md                # Document explaining design choices
-└── README.md                    # This file
+├── evaluation.md               
+└── README.md           
