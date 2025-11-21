@@ -1,5 +1,11 @@
 import pytest
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from src.ngram_model import TrigramModel
+
 
 def test_fit_and_generate():
     model = TrigramModel()
@@ -9,6 +15,7 @@ def test_fit_and_generate():
     assert isinstance(generated_text, str)
     assert len(generated_text.split()) > 0
 
+
 def test_empty_text():
     model = TrigramModel()
     text = ""
@@ -16,11 +23,10 @@ def test_empty_text():
     generated_text = model.generate()
     assert generated_text == ""
 
+
 def test_short_text():
     model = TrigramModel()
     text = "I am."
     model.fit(text)
     generated_text = model.generate()
     assert isinstance(generated_text, str)
-
-
