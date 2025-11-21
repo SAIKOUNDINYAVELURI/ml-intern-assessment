@@ -20,7 +20,7 @@ The model is trained on a text corpus and generates new text using trigram proba
 
     **Run tests**
    ```bash
-     pytest
+    pytest
     ```
 
 
